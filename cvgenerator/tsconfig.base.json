@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@cvgenerator/containers": ["libs/containers/src/index.ts"],
+      "@cvgenerator/cvgenerator/ui": ["libs/cvgenerator/ui/src/index.ts"],
+      "@cvgenerator/layouts": ["libs/layouts/src/index.ts"],
+      "@cvgenerator/store": ["libs/store/src/index.ts"],
+      "@cvgenerator/ui": ["libs/ui/src/index.ts"],
+      "@cvgenerator/utils": ["libs/utils/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

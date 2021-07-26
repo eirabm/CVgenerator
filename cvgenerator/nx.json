@@ -27,12 +27,30 @@
     ]
   },
   "projects": {
+    "containers": {
+      "tags": []
+    },
     "cvgenerator": {
       "tags": []
     },
     "cvgenerator-e2e": {
       "tags": [],
       "implicitDependencies": ["cvgenerator"]
+    },
+    "cvgenerator-ui": {
+      "tags": []
+    },
+    "layouts": {
+      "tags": []
+    },
+    "store": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
+    },
+    "utils": {
+      "tags": []
     }
   }
 }

@@ -1,0 +1,38 @@
+.asideMenu{
+    width: 20%;
+	float: right;
+	margin-top: -8px;
+	position: absolute;
+	height: 100%;
+	background-color: #141f39;
+	padding: 80px 0 150px 50px;
+
+	ul{
+        list-style-type: none;
+        
+        li{
+		margin-bottom: 20px;
+		padding: 10px;
+		color: #adadad;
+		top: 10px;
+		right: 15px;
+		cursor: pointer;
+        text-decoration: none;
+		margin:20px;
+	    }
+    }
+
+    .link{
+        text-decoration: none;
+		color: white;
+
+        &:visited{
+            text-decoration: none;
+			color: white;
+        }
+    }
+
+	.active{
+		background-color: #3983fa;
+	}
+}

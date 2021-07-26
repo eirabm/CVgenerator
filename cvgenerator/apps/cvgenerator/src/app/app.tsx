@@ -1,5 +1,5 @@
 import styles from './app.module.scss';
-import {Header} from '@cvgenerator/ui';
+import {Header, SideBar} from '@cvgenerator/ui';
 
 import { ReactComponent as Logo } from './logo.svg';
 import star from './star.svg';
@@ -10,6 +10,7 @@ export function App() {
   return (
   <>
    <Header />
+   <SideBar />
   </>
   );
 }

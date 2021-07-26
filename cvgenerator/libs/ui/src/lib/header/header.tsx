@@ -1,13 +1,22 @@
-import './header.module.scss';
+import styles from './header.module.scss';
 
 /* eslint-disable-next-line */
 export interface HeaderProps {}
 
 export function Header(props: HeaderProps) {
   return (
-    <div>
-      <h1>Welcome to Header!</h1>
+    <header className={styles.navBar}>
+    <div className={styles.page}>
+        <p>actual page</p>
     </div>
+
+    <nav>
+      <ul>
+        <li><p>usuario</p></li>
+        <li><button>log out</button></li>
+      </ul>
+    </nav>
+  </header>
   );
 }
 

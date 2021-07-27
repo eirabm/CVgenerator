@@ -3,8 +3,7 @@
     width: 70%;
     align-items: center;
     height: 50px;
-    position: fixed;
-    left: 30%;
+    margin-left: 25%;
 
     .page{
         float: left;
@@ -15,7 +14,6 @@
     }
     
     nav{
-        position: relative;
         float: right;
         font-family: 'Barlow', sans-serif;
         font-weight: bold;

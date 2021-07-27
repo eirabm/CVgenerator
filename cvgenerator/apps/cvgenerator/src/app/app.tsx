@@ -1,17 +1,34 @@
 import styles from './app.module.scss';
+import {Account, Documents, Trash} from '@cvgenerator/containers';
+
 import {Header, SideBar} from '@cvgenerator/ui';
 
-import { ReactComponent as Logo } from './logo.svg';
-import star from './star.svg';
-
-import { Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 export function App() {
   return (
-  <>
-   <Header />
-   <SideBar />
-  </>
+  <div>
+
+   <Router>
+
+      <Header />
+      <SideBar />
+
+      <div className={styles.app}>
+
+        <Switch>
+          <Route exact path="/" component={Documents} />
+
+          <Route exact path="/trash" component={Trash} />
+
+          <Route exact path="/account" component={Account} />
+        </Switch>
+
+      </div>
+    </Router>
+
+
+  </div>
   );
 }
 

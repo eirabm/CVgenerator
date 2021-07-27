@@ -1,30 +1,40 @@
 .asideMenu{
     width: 20%;
 	float: right;
-	margin-top: -8px;
-	position: absolute;
+	position: fixed;
+	margin-top: -50px;
 	height: 100%;
 	background-color: #141f39;
 	padding: 80px 0 150px 50px;
+	font-family: 'Barlow', sans-serif;
 
 	ul{
+		position: relative;
         list-style-type: none;
+		display: block;
+		width: 90%;
+		margin-top: 10%;
         
         li{
+		width: 100%;
 		margin-bottom: 20px;
-		padding: 10px;
 		color: #adadad;
 		top: 10px;
 		right: 15px;
 		cursor: pointer;
         text-decoration: none;
 		margin:20px;
+		padding: 20px;
 	    }
     }
 
     .link{
         text-decoration: none;
 		color: white;
+		font-size: 1rem;
+		padding: 20px;
+		margin: 20px;
+		border-radius: 4px;
 
         &:visited{
             text-decoration: none;

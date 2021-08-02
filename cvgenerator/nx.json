@@ -1,0 +1,56 @@
+{
+  "npmScope": "cvgenerator",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "containers": {
+      "tags": []
+    },
+    "cvgenerator": {
+      "tags": []
+    },
+    "cvgenerator-e2e": {
+      "tags": [],
+      "implicitDependencies": ["cvgenerator"]
+    },
+    "cvgenerator-ui": {
+      "tags": []
+    },
+    "layouts": {
+      "tags": []
+    },
+    "store": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
+    },
+    "utils": {
+      "tags": []
+    }
+  }
+}

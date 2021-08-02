@@ -1,13 +1,42 @@
-import './header.module.scss';
+import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import styles from './header.module.scss';
+
+import SettingsOutlinedIcon from '@material-ui/icons/SettingsOutlined';
+import ExitToAppOutlinedIcon from '@material-ui/icons/ExitToAppOutlined';
 
 /* eslint-disable-next-line */
 export interface HeaderProps {}
 
 export function Header(props: HeaderProps) {
+  const { pathname } = useLocation();
+
+  console.log(useLocation())
+
+  const paths: {[key: string]: string } = {
+    "/":"Documentos",
+    "/trash": "Papelera",
+    "/account": "Cuenta"
+  }
+
   return (
-    <div>
-      <h1>Welcome to Header!</h1>
-    </div>
+  <header className={styles.navBar}>
+      <div className={styles.page}>
+          <p>{paths[pathname]}</p>
+      </div>
+
+      <div className={styles.userIcon}>
+        <label htmlFor="toggle" className={styles.dispName}>AB</label> 
+        <input type="checkbox" id="toggle" className={styles.toggle}/>
+
+        <div className={styles.toggleMenu}>
+          <ul>
+            <li> <SettingsOutlinedIcon /> Configuración </li>
+            <li> <ExitToAppOutlinedIcon /> Cerrar sesión </li>
+          </ul>
+        </div>
+      </div>
+  </header>
   );
 }
 

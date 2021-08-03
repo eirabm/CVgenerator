@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import SideBar from './side-bar';
+import EducationForm from './education-form';
 
-describe('SideBar', () => {
+describe('EducationForm', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<SideBar />);
+    const { baseElement } = render(<EducationForm />);
     expect(baseElement).toBeTruthy();
   });
 });

@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Ui from './ui';
+import SkillsForm from './skills-form';
 
-describe('Ui', () => {
+describe('SkillsForm', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Ui />);
+    const { baseElement } = render(<SkillsForm />);
     expect(baseElement).toBeTruthy();
   });
 });

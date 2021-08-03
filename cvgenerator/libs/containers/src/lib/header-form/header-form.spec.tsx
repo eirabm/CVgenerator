@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import SidebarLayout from './sidebar-layout';
+import HeaderForm from './header-form';
 
-describe('SidebarLayout', () => {
+describe('HeaderForm', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<SidebarLayout />);
+    const { baseElement } = render(<HeaderForm />);
     expect(baseElement).toBeTruthy();
   });
 });

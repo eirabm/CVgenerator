@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Account from './account';
+import SummaryForm from './summary-form';
 
-describe('Account', () => {
+describe('SummaryForm', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Account />);
+    const { baseElement } = render(<SummaryForm />);
     expect(baseElement).toBeTruthy();
   });
 });

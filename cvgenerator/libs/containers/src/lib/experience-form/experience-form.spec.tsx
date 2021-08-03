@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Trash from './trash';
+import ExperienceForm from './experience-form';
 
-describe('Trash', () => {
+describe('ExperienceForm', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Trash />);
+    const { baseElement } = render(<ExperienceForm />);
     expect(baseElement).toBeTruthy();
   });
 });

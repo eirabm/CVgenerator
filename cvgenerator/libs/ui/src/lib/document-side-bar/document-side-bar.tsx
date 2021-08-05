@@ -40,6 +40,10 @@ export function DocumentSideBar(props: DocumentSideBarProps) {
       path: '/education'
     },
     {
+      text: 'Other Skills',
+      path: '/otherskills'
+    },
+    {
       text: 'Top Skills',
       path: '/skills'
     },

@@ -6,7 +6,7 @@ export interface SkillsFormProps {}
 export function SkillsForm(props: SkillsFormProps) {
   return (
     <div>
-      <h1>Welcome to SkillsForm!</h1>
+      <h1>Skills</h1>
     </div>
   );
 }

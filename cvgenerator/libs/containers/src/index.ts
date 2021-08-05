@@ -1,3 +1,5 @@
+export * from './lib/document-preview/document-preview';
+export * from './lib/other-skills/other-skills';
 export * from './lib/containers';
 export * from './lib/skills-form/skills-form';
 export * from './lib/education-form/education-form';

@@ -11,9 +11,7 @@ export interface HeaderProps {}
 export function Header(props: HeaderProps) {
   const { pathname } = useLocation();
 
-  console.log(useLocation())
-
-  const paths: {[key: string]: string } = {
+  const paths: Record<string, string> = {
     "/":"Documentos",
     "/trash": "Papelera",
     "/account": "Cuenta"

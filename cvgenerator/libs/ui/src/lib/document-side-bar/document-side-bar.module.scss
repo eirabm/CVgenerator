@@ -1,0 +1,30 @@
+.asideMenu {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 20%;
+  float: right;
+  position: fixed;
+  margin-top: -5%;
+  margin-left: -10px;
+  height: 100%;
+  color: #fff;
+  background-color: #141f39;
+  font-family: 'Barlow', sans-serif;
+
+  .link {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    width: 90%;
+  }
+
+  .active {
+    background-color: #3983fa;
+  }
+}

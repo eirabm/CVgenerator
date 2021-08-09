@@ -1,0 +1,17 @@
+.mainContainer {
+  margin: 2%;
+  margin-left: 29%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: space-around;
+
+  .formContainer {
+    width: 50%;
+    padding: 10px;
+    margin-right: 40px;
+  }
+  .preview {
+    width: 50%;
+    padding: 10px;
+  }
+}

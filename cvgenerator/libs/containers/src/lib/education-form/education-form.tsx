@@ -2,11 +2,13 @@ import './education-form.module.scss';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
+import NewCv from '../Cv';
 
 /* eslint-disable-next-line */
 export interface EducationFormProps {}
 
 export function EducationForm(props: EducationFormProps) {
+  
   return (
     <div>
       <h1>Education</h1>

@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const cors = require('cors');
+const cors = require('cors');o
 const bodyParser = require('body-parser');
 const hostname = '127.0.0.1';
 const port = 8000;

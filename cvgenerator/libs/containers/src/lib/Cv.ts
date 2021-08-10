@@ -7,8 +7,23 @@ class Cv {
         otherSkills : string = '';
         topSkills : Array<string> = [];
 
-    constructor() {
-        
+    constructor({name, role, sumary, experience, education, otherSkills, topskills}:
+        {
+            name:string,
+            role:string,
+            sumary: string,
+            experience : Array<string>,
+            education : Array<string>,
+            otherSkills : string,
+            topskills : Array<string>,
+        }) {
+        this.name = name;
+        this.role = role;
+        this.sumary = sumary;
+        this.experience = experience;
+        this.education = education;
+        this.otherSkills = otherSkills;
+        this.topSkills = topskills;
     }
     headerSetter({name, role}:
         {

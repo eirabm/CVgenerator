@@ -51,7 +51,7 @@ export const header = async ( req, res) => {
 			return data;
 		}
 	});
-	};
+};
 
 export const sumary = async ( req, res) => {
 	const body = req.body;

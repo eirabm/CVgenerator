@@ -1,6 +1,7 @@
+declare function require(name:string);
 const express = require('express');
 const app = express();
-const cors = require('cors');o
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const hostname = '127.0.0.1';
 const port = 8000;

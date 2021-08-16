@@ -2,7 +2,6 @@ import './education-form.module.scss';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
-import NewCv from '../Cv';
 
 /* eslint-disable-next-line */
 export interface EducationFormProps {}

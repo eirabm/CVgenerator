@@ -2,17 +2,17 @@ import db from './dynamodb';
 import {uuid} from 'uuidv4';
 import { Request, Response} from 'express';
 
-interface CV{
-	id:string;
-	name:string;
-	last_name:string;
-	role:string;
-	experience:Array<string>;
-	education:Array<string>;
-	oskills:string;
-	tskills:Array<string>;
-}
-//const cv: CV = {}
+// interface CV{
+// 	id:string;
+// 	name:string;
+// 	last_name:string;
+// 	role:string;
+// 	experience:Array<string>;
+// 	education:Array<string>;
+// 	oskills:string;
+// 	tskills:Array<string>;
+// }
+
 export const createCv = async (req: Request, res: Response): Promise<void> => {
 		const body = req.body;
 		const params = {
@@ -30,7 +30,7 @@ export const createCv = async (req: Request, res: Response): Promise<void> => {
 			}
 		}
 
-		const data = await db.put(params, (err, data) => {
+		await db.put(params, (err) => {
 			if (err){
 				res.status(400).json(err);
 			}
@@ -40,76 +40,75 @@ export const createCv = async (req: Request, res: Response): Promise<void> => {
 		});
 }
 
-export const CvAll = async (req: Request, res: Response): Promise<any> => {
+export const CvAll = async (res: Response): Promise<void> => {
 	const Tb = {TableName: 'employee_dev'};
-	const data = await db.scan(Tb, (err, data) => {
+	await db.scan(Tb, (err, data) => {
 		if (err) {
-			console.error("Unable to get the employee. Error JSON:", JSON.stringify(err, null, 2));
+			res.status(400).json(err);
 		}
 		else {
 			res.status(200).json(data.Items);
 		}
 	});
-	return data;
 }
 
-export const header = async ( req: Request, res: Response) => {
-	const body = req.body;
-	const params = {
-		TableName: 'employee_dev',
-		Item: {
-			'id': body.id,
-			'name':body.name,
-			'role': body.last_name
-		},
-	};
+// export const header = async ( req: Request, res: Response) => {
+// 	const body = req.body;
+// 	const params = {
+// 		TableName: 'employee_dev',
+// 		Item: {
+// 			'id': body.id,
+// 			'name':body.name,
+// 			'role': body.last_name
+// 		},
+// 	};
 
-    const data: {} = await db.put(params, (err) => {
-		if (err) {
-			return {error: err};
-		}
-		else {
-			return res.status(200).json({data});
-		}
-	});
-};
+//     const data: {} = await db.put(params, (err) => {
+// 		if (err) {
+// 			return {error: err};
+// 		}
+// 		else {
+// 			return res.status(200).json({data});
+// 		}
+// 	});
+// };
 
-export const sumary = async ( req: Request, res: Response) => {
-	const body = req.body;
-	const params = {
-		TableName: 'employee_dev',
-		Item: {
-			'id': body.id,
-			'sumary':body.sumary
-		},
-	};
+// export const sumary = async ( req: Request, res: Response) => {
+// 	const body = req.body;
+// 	const params = {
+// 		TableName: 'employee_dev',
+// 		Item: {
+// 			'id': body.id,
+// 			'sumary':body.sumary
+// 		},
+// 	};
 
-    const data: {} = await db.put(params, (err) => {
-		if (err) {
-			return {error: err};
-		}
-		else {
-			return res.status(200).json({data});
-		}
-	});
-};
+//     const data: {} = await db.put(params, (err) => {
+// 		if (err) {
+// 			return {error: err};
+// 		}
+// 		else {
+// 			return res.status(200).json({data});
+// 		}
+// 	});
+// };
 
-export const experience = async ( req: Request, res: Response) => {
-	const body = req.body;
-	const params = {
-		TableName: 'employee_dev',
-		Item: {
-			'id': body.id,
-			'experience':body.experience
-		},
-	};
+// export const experience = async ( req: Request, res: Response) => {
+// 	const body = req.body;
+// 	const params = {
+// 		TableName: 'employee_dev',
+// 		Item: {
+// 			'id': body.id,
+// 			'experience':body.experience
+// 		},
+// 	};
 
-    const data: {} = await db.put(params, (err) => {
-		if (err) {
-			return {error: err};
-		}
-		else {
-			return res.status(200).json({data});
-		}
-	});
-};
+//     const data: {} = await db.put(params, (err) => {
+// 		if (err) {
+// 			return {error: err};
+// 		}
+// 		else {
+// 			return res.status(200).json({data});
+// 		}
+// 	});
+// };

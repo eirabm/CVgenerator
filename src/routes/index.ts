@@ -1,3 +1,4 @@
 import cv from './cv/cv';
+import cvs from './cv/all';
 
-export {cv};
+export default [cv, cvs];

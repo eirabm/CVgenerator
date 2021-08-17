@@ -4,9 +4,13 @@ import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
 
 /* eslint-disable-next-line */
-export interface OtherSkillsProps {}
+export interface OtherSkillsProps {
+  data:string
+}
 
 export function OtherSkills(props: OtherSkillsProps) {
+  console.log(props)
+
   return (
     <div>
       <h1>Other Skills</h1>

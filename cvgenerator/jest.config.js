@@ -7,5 +7,6 @@ module.exports = {
     '<rootDir>/libs/layouts',
     '<rootDir>/libs/store',
     '<rootDir>/libs/utils',
+    '<rootDir>/apps/api',
   ],
 };

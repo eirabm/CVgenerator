@@ -4,9 +4,13 @@ import Button from '@material-ui/core/Button';
 import SaveIcon from '@material-ui/icons/Save';
 
 /* eslint-disable-next-line */
-export interface SummaryFormProps {}
+export interface SummaryFormProps {
+  data:string
+}
 
 export function SummaryForm(props: SummaryFormProps) {
+  console.log(props)
+  
   return (
     <div>
       <h1>Summary</h1>

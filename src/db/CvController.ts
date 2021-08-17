@@ -40,7 +40,7 @@ export const createCv = async (req: Request, res: Response): Promise<void> => {
 		});
 }
 
-export const CvAll = async (res: Response): Promise<void> => {
+export const CvAll = async (req: Request, res: Response): Promise<void> => {
 	const Tb = {TableName: 'employee_dev'};
 	await db.scan(Tb, (err, data) => {
 		if (err) {

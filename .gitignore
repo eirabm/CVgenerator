@@ -4,5 +4,4 @@
 /node_modules
 
 #AWS
-/db/dynamodb.ts
-/db/aws.ts
+src/db/dynamodb.ts

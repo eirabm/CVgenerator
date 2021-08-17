@@ -2,6 +2,6 @@ import { Router } from 'express';
 import {createCv} from '../../db/CvController';
 const upsCv = Router();
 
-upsCv.post('/curriculum/', createCv);
+upsCv.post('/cv/', createCv);
 
 export default upsCv;

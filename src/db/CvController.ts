@@ -1,4 +1,4 @@
-import db from './dynamodb';
+import {db} from './dynamodb';
 import {uuid} from 'uuidv4';
 import { Request, Response} from 'express';
 

@@ -26,7 +26,7 @@ export function DocumentLayout(props: DocumentLayoutProps) {
       "university": "UCSJ"
       }
       ],
-      "other skills": "this are other skills",
+      "otherSkills": "this are other skills",
       "header": {
       "name": "Berenice",
       "role": "Front-ender"
@@ -34,6 +34,30 @@ export function DocumentLayout(props: DocumentLayoutProps) {
       "id": "2"
       }
   )
+ 
+  useEffect(()=>{
+    fetch('/api/1')
+      .then((x) => x.json())
+      .then((res) => setData(res.Item))
+  }, [])
+
+  const save = () =>{
+    fetch('/api', {
+      method:'POST',
+      headers: { "Content-Type": "application/json"},
+			body: JSON.stringify(data)
+    })
+      .then(() => alert("!"))
+  }
+
+  function handleChange(evt) {
+    const value = evt.target.value;
+    setData({
+      ...data,
+      [evt.target.name]: value
+    });
+    console.log(data)
+  }
 
   return (
     <div>
@@ -43,7 +67,7 @@ export function DocumentLayout(props: DocumentLayoutProps) {
           <div className={styles.formContainer}>
             <Switch>
               <Route exact path="/header">
-                <HeaderForm data={data.header}/>
+                <HeaderForm data={data.header} onChange={handleChange}/>
               </Route>
               <Route exact path="/summary">
                 <SummaryForm data={data.summary} />
@@ -51,14 +75,14 @@ export function DocumentLayout(props: DocumentLayoutProps) {
               <Route exact path="/experience" component={ExperienceForm} />
               <Route exact path="/education" component={EducationForm} />
               <Route exact path="/otherskills">
-                <OtherSkills data={data['other skills']} />
+                <OtherSkills data={data.otherSkills} />
               </Route>
               <Route exact path="/skills" component={SkillsForm} />
             </Switch>
           </div>
           <div className={styles.preview}>
             <button onClick={()=>save()}>Save</button>
-            <DocumentPreview />
+            <DocumentPreview data={data} />
           </div>
         </div>
       </Router>

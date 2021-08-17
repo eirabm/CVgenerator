@@ -10,17 +10,17 @@ export interface HeaderFormProps {
     name:string,
     role:string
   }
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 export function HeaderForm(props: HeaderFormProps) {
-  console.log(props)
   return (
     <div>
       <h1>Header</h1>
 
       <form noValidate autoComplete="off" action='/api/1' method='PUT'>
-        <TextField required label="Name" variant="outlined" />
-        <TextField required label="Role" variant="outlined" />
+        <TextField required label="Name" variant="outlined" defaultValue={props.data.name} onChange={props.onChange}/>
+        <TextField required label="Role" variant="outlined" defaultValue={props.data.role} onChange={props.onChange}/>
 
         <Button type="submit" variant="contained" startIcon={<SaveIcon />}> Save </Button>
       </form>

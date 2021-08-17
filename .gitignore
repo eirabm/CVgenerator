@@ -4,5 +4,5 @@
 /node_modules
 
 #AWS
-/db/dynamodb.js
-/db/aws.js
+/db/dynamodb.ts
+/db/aws.ts

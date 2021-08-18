@@ -31,7 +31,7 @@ app.get('/api/:id', async (req, res) => {
 
 app.post('/api', async (req, res) => {
   const cv = req.body;
-  console.log("holi", cv)
+  console.log("holi", req.body)
 
   try {
       const newCv = await addOrUpdateCv(cv);

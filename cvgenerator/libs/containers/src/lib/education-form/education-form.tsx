@@ -7,6 +7,7 @@ import SaveIcon from '@material-ui/icons/Save';
 export interface EducationFormProps {}
 
 export function EducationForm(props: EducationFormProps) {
+  
   return (
     <div>
       <h1>Education</h1>

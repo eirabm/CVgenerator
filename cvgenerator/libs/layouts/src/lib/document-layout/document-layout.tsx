@@ -34,6 +34,8 @@ export function DocumentLayout(props: DocumentLayoutProps) {
       "id": "2"
       }
   )
+
+  const holi = "holi"
  
   useEffect(()=>{
     fetch('/api/1')
@@ -42,7 +44,7 @@ export function DocumentLayout(props: DocumentLayoutProps) {
   }, [])
 
   const save = () =>{
-    fetch('/api', {
+    fetch('http://127.0.0.1:8000/api/cv', {
       method:'POST',
       headers: { "Content-Type": "application/json"},
 			body: JSON.stringify(data)
